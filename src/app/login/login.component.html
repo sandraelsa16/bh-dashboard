@@ -1,0 +1,19 @@
+<div class="loginPage vh-100 w-100 d-flex justify-content-center align-items-center">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <p class="text-center">BH</p>
+        <div class=" login d-flex flex-column align-items-center w-100">
+            <div class="mb-3 w-50">
+                <input type="text" id="username" placeholder=" USERNAME" class="p-1" #username >
+            </div>
+            
+            <div class="mb-3 w-50">
+                <input type="password" id="password" placeholder="PASSWORD" class="p-1" #password>
+            </div>
+            <div class="loginButton d-grid w-50">
+                <button  class="p-1" (click)="login(username.value,password.value)">LOGIN</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

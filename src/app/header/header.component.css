@@ -1,0 +1,13 @@
+.header {
+    background-color: white;
+}
+
+.user-icon {
+    height: 30px;
+    width: 40px;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px;
+}

@@ -1,0 +1,60 @@
+.sidebar {
+    background-color: rgb(41, 41, 139);
+    height: 100vh;
+    color: white;
+}
+
+h1{
+    background-color: rgb(15, 15, 71);
+}
+
+ul{
+    margin-top: 20px;
+}
+
+li{
+    list-style-type: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.dashboard {
+    background-color: rgb(197, 194, 194);
+}
+
+.projects {
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 15px;
+    font-size: large;
+}
+
+.dot1 {
+    background-color: rgb(118, 58, 177);
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+.dot2 {
+    background-color: rgb(18, 147, 164);
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+.dot3 {
+    background-color: rgb(231, 96, 38);
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+.dot4 {
+    background-color: rgb(164, 18, 159);
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+}
+
+.active {
+    background-color: blueviolet;
+    color: white;
+}
