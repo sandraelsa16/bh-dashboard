@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
    name = sessionStorage.getItem('username')
-  //  constructor(private router:Router)
+   constructor(private router:Router){}
    logout(){
     sessionStorage.clear()
-    // this.router.navigateByUrl('')
+    this.router.navigateByUrl('')
    }
 }
