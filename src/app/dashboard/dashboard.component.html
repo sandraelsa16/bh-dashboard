@@ -26,40 +26,29 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                   <td><input type="checkbox" name="" id=""></td>
-                   <td><img src="p1.jpg" class="projectImg"  alt="project1">Rules Post on Dribble</td>
-                   <td><div class="d-flex align-items-center"><div  class="dot1 me-1"></div> Document</div></td>
-                   <td>12 Aug 2024</td>
-                   <td>Monry Hasu</td>
-                   <td>...</td>    
-                </tr>
-                <tr>
-                   <td><input type="checkbox" name="" id=""></td>
-                   <td><img src="p2.jpg"  class="projectImg"  alt="project2">Login & Sign Up Ui</td>
-                   <td><div class="d-flex align-items-center"><div  class="dot2 me-1"></div> Animation</div></td>
-                   <td>19 Mar 2024</td>
-                   <td>Nomru Nalij</td>
-                   <td>...</td>    
-                </tr>
-                <tr>
-                   <td><input type="checkbox" name="" id=""></td>
-                   <td><img src="p3.jpg"  class="projectImg"  alt="project3">Nft website Pages</td>
-                   <td><div class="d-flex align-items-center"><div  class="dot3 me-1"></div> Image</div></td>
-                   <td>30 Jun 2024</td>
-                   <td>Nomru Nalij</td>
-                   <td>...</td>    
-                </tr>
-                <tr>
-                   <td><input type="checkbox" name="" id=""></td>
-                   <td><img src="p4.jpg"  class="projectImg"  alt="project4">Square Dashboard</td>
-                   <td><div class="d-flex align-items-center"><div  class="dot4 me-1"></div> Document</div></td>
-                   <td>24 Oct 2024</td>
-                   <td>Willium sen</td>
-                   <td>...</td>    
-                </tr>
-            </tbody>
+          <tbody>
+            <tr *ngFor="let project of projects;">
+                <td><input type="checkbox" name="" id=""></td>
+                <td>
+                  <img 
+                    [src]="project.icon" 
+                    [alt]="project.fileName" 
+                    width="30" height="30"
+                    style="border-radius: 50px;margin-right: 5px;"
+                  />
+                {{ project.fileName }}</td>
+                <td>
+                  <span 
+                    [style.backgroundColor]="project.dotcolor"
+                    style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;">
+                  </span>
+                  {{ project.fileType }}
+                </td>
+                <td>{{ project.date }}</td>
+                <td>{{ project.author }}</td>
+                <td>{{project.expand}}</td>
+              </tr>
+          </tbody>
         </table>
         <div class="pagination d-flex justify-content-between px-2">
             <div>
