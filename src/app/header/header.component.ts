@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-   name = sessionStorage.getItem('username')
+   name = sessionStorage.getItem('name')
    constructor(private router:Router){}
    logout(){
     sessionStorage.clear()

@@ -1,19 +1,25 @@
 <div class="loginPage vh-100 w-100 d-flex justify-content-center align-items-center">
     <div class="col-4"></div>
     <div class="col-4">
-        <p class="text-center">BH</p>
+        <h1 class="text-center">BH</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
         <div class=" login d-flex flex-column align-items-center w-100">
             <div class="mb-3 w-50">
-                <input type="text" id="username" placeholder=" USERNAME" class="p-1" #username >
+                <input type="text" id="username" placeholder=" USERNAME" class="p-1" formControlName="username" >
+                <p class="text-danger fw-bolder" *ngIf="loginForm.get('username')?.errors && loginForm.get('username')?.touched">Invalid Username</p>
             </div>
-            
+                
             <div class="mb-3 w-50">
-                <input type="password" id="password" placeholder="PASSWORD" class="p-1" #password>
+                <input type="password" id="password" placeholder="PASSWORD" class="p-1" formControlName="password">
+                <p class="text-danger fw-bolder" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">Invalid password</p>
             </div>
+               
             <div class="loginButton d-grid w-50">
-                <button  class="p-1" (click)="login(username.value,password.value)">LOGIN</button>
+                <button  class="p-1"  [disabled]="loginForm.invalid">LOGIN</button>
             </div>
+
         </div>
+    </form>
     </div>
     <div class="col-4"></div>
 </div>

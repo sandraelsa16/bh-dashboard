@@ -1,22 +1,25 @@
 .loginPage {
-    background-color: rgb(41, 41, 139);
+    background-color: #2a3650;
 }
 
-p {
+h1 {
    font-size: 80px;
    font-weight: 500;
    color: whitesmoke;
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   letter-spacing: 10px;
+   /* letter-spacing: 10px; */
 }
 
 input {
     width: 100%;
+    background-color: transparent;
+    color: white;
+    border-color: white;
 }
 
 button {
-    background-color: transparent;
+    background-color: white;
     border-color: white;
-    color: white;
+    color: #2a3650;
 }
 
